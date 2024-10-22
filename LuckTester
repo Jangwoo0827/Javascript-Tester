@@ -1,1 +1,33 @@
+function calculateLuckiness() {
+  return (100 - Math.random() * 100).toFixed(3);
+}
 
+let luckiness = calculateLuckiness();
+console.log("Your luckiness percentage is: " + luckiness + "%");
+
+let lucklevel;
+
+if (luckiness < 100 && luckiness > 60) {
+  lucklevel = "[Common]";
+} else if (luckiness < 60 && luckiness > 30) {
+  lucklevel = "[Uncommon]";
+} else if (luckiness < 30 && luckiness > 15) {
+  lucklevel = "[Rare]";
+} else if (luckiness < 15 && luckiness > 5) {
+  lucklevel = "[Epic]";
+} else if (luckiness < 5 && luckiness > 0.5) {
+  lucklevel = "[Legendary]";
+} else if (luckiness < 0.5 && luckiness > 0.1) {
+  lucklevel = "[Mythical]";
+} else if (luckiness < 0.1 && luckiness > 0.03) {
+  lucklevel = "[God]";
+} else if (luckiness < 0.03 && luckiness > 0.01) {
+  lucklevel = "[Mega]";
+} else if (luckiness < 0.01 && luckiness >= 0) {
+  lucklevel = "[Chromatic]";
+}
+
+console.log(lucklevel);
+
+// Common: 40% (60% - 100%) Uncommon: 30% (30% - 60%) Rare: 15% (15% - 30%) Epic: 10% (5% - 15%) Legendary: 4.5% (0.5% - 5%)
+//Mythical: 0.4% (0.1% - 0.5%) God: 0.07% (0.03% - 0.1%) Mega: 0.02% (0.01% - 0.03%) Chromatic: 0.01% (0% - 0.01%)
