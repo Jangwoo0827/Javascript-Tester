@@ -6,28 +6,50 @@ let luckiness = calculateLuckiness();
 console.log("Your luckiness percentage is: " + luckiness + "%");
 
 let lucklevel;
+let effect1 = "";
+let effect2 = "";
 
 if (luckiness < 100 && luckiness > 60) {
   lucklevel = "[Common]";
+  effect1 = "   -"
+  effect2 = "   -"
 } else if (luckiness < 60 && luckiness > 30) {
   lucklevel = "[Uncommon]";
+  effect1 = "   --"
+  effect2 = "   --"
 } else if (luckiness < 30 && luckiness > 15) {
   lucklevel = "[Rare]";
+  effect1 = " ---"
+  effect2 = " ---"
 } else if (luckiness < 15 && luckiness > 5) {
   lucklevel = "[Epic]";
+  effect1 = "-----"
+  effect2 = "-----"
 } else if (luckiness < 5 && luckiness > 0.5) {
   lucklevel = "[Legendary]";
+  effect1 = "<<----->>"
+  effect2 = "<<----->>"
 } else if (luckiness < 0.5 && luckiness > 0.1) {
   lucklevel = "[Mythical]";
+  effect1 = "<<:-----:>>"
+  effect2 = "<<:-----:>>"
 } else if (luckiness < 0.1 && luckiness > 0.03) {
-  lucklevel = "[God]";
+  lucklevel = "   [God]";
+  effect1 = "{[<------>]}"
+  effect2 = "{[<------>]}"
 } else if (luckiness < 0.03 && luckiness > 0.01) {
-  lucklevel = "[Mega]";
+  lucklevel = "   [Mega]";
+  effect1 = "{[<(-----)>]}"
+  effect2 = "{[<(-----)>]}"
 } else if (luckiness < 0.01 && luckiness >= 0) {
-  lucklevel = "[Chromatic]";
+  lucklevel = "  [Chromatic]";
+  effect1 = "{[(\\~<---->~//)]}"
+  effect2 = "{[(\\~<---->~//)]}"
 }
 
+console.log(effect1)
 console.log(lucklevel);
+console.log(effect2)
 
 // Common: 40% (60% - 100%) Uncommon: 30% (30% - 60%) Rare: 15% (15% - 30%) Epic: 10% (5% - 15%) Legendary: 4.5% (0.5% - 5%)
 //Mythical: 0.4% (0.1% - 0.5%) God: 0.07% (0.03% - 0.1%) Mega: 0.02% (0.01% - 0.03%) Chromatic: 0.01% (0% - 0.01%)
