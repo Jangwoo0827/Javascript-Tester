@@ -1,38 +1,46 @@
-// RNG Luck Game with Even Rarer Rarities
+// RNG Luck Game with Ultra Ultra Rare Rarities
 function rngLuckGame() {
     const randomNumber = Math.random() * 100; // Random number between 0 and 100
     let luckyRarity;
 
-    if (randomNumber < 0.001) { // 0.001% chance for cosmic
-        luckyRarity = 'cosmic';
-    } else if (randomNumber < 0.002) { // 0.001% chance for astral
-        luckyRarity = 'astral';
-    } else if (randomNumber < 0.005) { // 0.003% chance for mythical
-        luckyRarity = 'mythical';
-    } else if (randomNumber < 0.01) { // 0.005% chance for legendary
-        luckyRarity = 'legendary';
-    } else if (randomNumber < 0.05) { // 0.04% chance for divine
-        luckyRarity = 'divine';
-    } else if (randomNumber < 0.1) { // 0.05% chance for celestial
-        luckyRarity = 'celestial';
-    } else if (randomNumber < 0.5) { // 0.4% chance for ethereal
+    if (randomNumber < 0.00000005) { // 0.00000005% chance for omniversal
+        luckyRarity = 'omniversal';
+    } else if (randomNumber < 0.0000001) { // 0.00000005% chance for infinite
+        luckyRarity = 'infinite';
+    } else if (randomNumber < 0.0000002) { // 0.0000001% chance for eternal
+        luckyRarity = 'eternal';
+    } else if (randomNumber < 0.00005) { // 0.0000498% chance for transcendental
+        luckyRarity = 'transcendental';
+    } else if (randomNumber < 0.0001) { // 0.00005% chance for primordial
+        luckyRarity = 'primordial';
+    } else if (randomNumber < 0.0002) { // 0.0001% chance for omnipotent
+        luckyRarity = 'omnipotent';
+    } else if (randomNumber < 0.0005) { // 0.0003% chance for ethereal
         luckyRarity = 'ethereal';
-    } else if (randomNumber < 1) { // 0.5% chance for mythic
+    } else if (randomNumber < 0.001) { // 0.0005% chance for spectral
+        luckyRarity = 'spectral';
+    } else if (randomNumber < 0.01) { // 0.009% chance for cosmic
+        luckyRarity = 'cosmic';
+    } else if (randomNumber < 0.05) { // 0.04% chance for astral
+        luckyRarity = 'astral';
+    } else if (randomNumber < 0.1) { // 0.05% chance for divine
+        luckyRarity = 'divine';
+    } else if (randomNumber < 0.5) { // 0.4% chance for mythic
         luckyRarity = 'mythic';
-    } else if (randomNumber < 3) { // 2% chance for legendary
+    } else if (randomNumber < 1) { // 0.5% chance for legendary
         luckyRarity = 'legendary';
-    } else if (randomNumber < 10) { // 7% chance for epic
+    } else if (randomNumber < 3) { // 2% chance for epic
         luckyRarity = 'epic';
-    } else if (randomNumber < 25) { // 15% chance for rare
+    } else if (randomNumber < 10) { // 7% chance for rare
         luckyRarity = 'rare';
-    } else if (randomNumber < 50) { // 25% chance for uncommon
+    } else if (randomNumber < 25) { // 15% chance for uncommon
         luckyRarity = 'uncommon';
     } else { // 50% chance for common
         luckyRarity = 'common';
     }
 
     console.log("Welcome to the RNG Luck Game!");
-    console.log(`Your random number is: ${randomNumber.toFixed(4)}%`);
+    console.log(`Your random number is: ${randomNumber.toFixed(8)}%`);
     console.log(`Based on your luck, your item rarity is: ${luckyRarity}.`);
 
     switch (luckyRarity) {
@@ -57,9 +65,6 @@ function rngLuckGame() {
         case 'ethereal':
             console.log("Ethereal rarity! You've found something otherworldly!");
             break;
-        case 'celestial':
-            console.log("Celestial item! You've discovered something heavenly!");
-            break;
         case 'divine':
             console.log("Divine rarity! You've uncovered a sacred treasure!");
             break;
@@ -68,6 +73,27 @@ function rngLuckGame() {
             break;
         case 'cosmic':
             console.log("Cosmic rarity! You've discovered an item beyond the realms!");
+            break;
+        case 'spectral':
+            console.log("Spectral rarity! You've encountered a ghostly artifact!");
+            break;
+        case 'omnipotent':
+            console.log("Omnipotent rarity! You've found something of immense power!");
+            break;
+        case 'primordial':
+            console.log("Primordial rarity! You've unearthed a relic from the dawn of time!");
+            break;
+        case 'transcendental':
+            console.log("Transcendental rarity! You've discovered something truly extraordinary!");
+            break;
+        case 'eternal':
+            console.log("Eternal rarity! You've found something that transcends time itself!");
+            break;
+        case 'infinite':
+            console.log("Infinite rarity! You've discovered a limitless treasure!");
+            break;
+        case 'omniversal':
+            console.log("Omniversal rarity! You've found something from all of existence!");
             break;
     }
 }
