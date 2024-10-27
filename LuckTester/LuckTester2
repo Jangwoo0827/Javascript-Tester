@@ -1,13 +1,17 @@
-// RNG Luck Game with Additional Rarities
+// RNG Luck Game with Even Rarer Rarities
 function rngLuckGame() {
     const randomNumber = Math.random() * 100; // Random number between 0 and 100
     let luckyRarity;
 
-    if (randomNumber < 0.01) { // 0.01% chance for chromatic
-        luckyRarity = 'chromatic';
-    } else if (randomNumber < 0.02) { // 0.01% chance for radiant
-        luckyRarity = 'radiant';
-    } else if (randomNumber < 0.05) { // 0.03% chance for divine
+    if (randomNumber < 0.001) { // 0.001% chance for cosmic
+        luckyRarity = 'cosmic';
+    } else if (randomNumber < 0.002) { // 0.001% chance for astral
+        luckyRarity = 'astral';
+    } else if (randomNumber < 0.005) { // 0.003% chance for mythical
+        luckyRarity = 'mythical';
+    } else if (randomNumber < 0.01) { // 0.005% chance for legendary
+        luckyRarity = 'legendary';
+    } else if (randomNumber < 0.05) { // 0.04% chance for divine
         luckyRarity = 'divine';
     } else if (randomNumber < 0.1) { // 0.05% chance for celestial
         luckyRarity = 'celestial';
@@ -59,11 +63,11 @@ function rngLuckGame() {
         case 'divine':
             console.log("Divine rarity! You've uncovered a sacred treasure!");
             break;
-        case 'radiant':
-            console.log("Radiant item! You've found something that shines brightly!");
+        case 'astral':
+            console.log("Astral rarity! You've found something from the stars!");
             break;
-        case 'chromatic':
-            console.log("Chromatic rarity! You've discovered a truly unique item!");
+        case 'cosmic':
+            console.log("Cosmic rarity! You've discovered an item beyond the realms!");
             break;
     }
 }
