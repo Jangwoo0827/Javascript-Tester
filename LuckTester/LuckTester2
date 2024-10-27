@@ -1,0 +1,72 @@
+// RNG Luck Game with Additional Rarities
+function rngLuckGame() {
+    const randomNumber = Math.random() * 100; // Random number between 0 and 100
+    let luckyRarity;
+
+    if (randomNumber < 0.01) { // 0.01% chance for chromatic
+        luckyRarity = 'chromatic';
+    } else if (randomNumber < 0.02) { // 0.01% chance for radiant
+        luckyRarity = 'radiant';
+    } else if (randomNumber < 0.05) { // 0.03% chance for divine
+        luckyRarity = 'divine';
+    } else if (randomNumber < 0.1) { // 0.05% chance for celestial
+        luckyRarity = 'celestial';
+    } else if (randomNumber < 0.5) { // 0.4% chance for ethereal
+        luckyRarity = 'ethereal';
+    } else if (randomNumber < 1) { // 0.5% chance for mythic
+        luckyRarity = 'mythic';
+    } else if (randomNumber < 3) { // 2% chance for legendary
+        luckyRarity = 'legendary';
+    } else if (randomNumber < 10) { // 7% chance for epic
+        luckyRarity = 'epic';
+    } else if (randomNumber < 25) { // 15% chance for rare
+        luckyRarity = 'rare';
+    } else if (randomNumber < 50) { // 25% chance for uncommon
+        luckyRarity = 'uncommon';
+    } else { // 50% chance for common
+        luckyRarity = 'common';
+    }
+
+    console.log("Welcome to the RNG Luck Game!");
+    console.log(`Your random number is: ${randomNumber.toFixed(4)}%`);
+    console.log(`Based on your luck, your item rarity is: ${luckyRarity}.`);
+
+    switch (luckyRarity) {
+        case 'common':
+            console.log("You've got something usual. Better luck next time!");
+            break;
+        case 'uncommon':
+            console.log("Not bad! You've found something a bit special.");
+            break;
+        case 'rare':
+            console.log("Congratulations! You've discovered something truly rare!");
+            break;
+        case 'epic':
+            console.log("Amazing! You've uncovered an epic item!");
+            break;
+        case 'legendary':
+            console.log("Incredible! You've found a legendary item!");
+            break;
+        case 'mythic':
+            console.log("Wow! You've discovered a mythic item!");
+            break;
+        case 'ethereal':
+            console.log("Ethereal rarity! You've found something otherworldly!");
+            break;
+        case 'celestial':
+            console.log("Celestial item! You've discovered something heavenly!");
+            break;
+        case 'divine':
+            console.log("Divine rarity! You've uncovered a sacred treasure!");
+            break;
+        case 'radiant':
+            console.log("Radiant item! You've found something that shines brightly!");
+            break;
+        case 'chromatic':
+            console.log("Chromatic rarity! You've discovered a truly unique item!");
+            break;
+    }
+}
+
+// Start the game
+rngLuckGame();
